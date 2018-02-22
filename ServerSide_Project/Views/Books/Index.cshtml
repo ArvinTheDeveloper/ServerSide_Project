@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Books";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Book Section</h2>
+
+        @using (Html.BeginForm("Search", "Books"))
+    {
+        <div class="form-group">
+            <label>Search for a book: </label>
+            <input class="form-control" type="search" placeholder="Enter book name here" />
+        </div>
+        <button class="btn btn-primary" type="submit">Search</button>
+}
+
+    </div>
+
+</div>
