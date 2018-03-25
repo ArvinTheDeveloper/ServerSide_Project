@@ -1,7 +1,40 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Author";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<div class="row">
+    <h2>Author Section</h2>
+
+    <div class="col-md-6">
+        <label>Search for an author: </label>
+        <div class="form-inline">
+            <input class="form-control" type="search" placeholder="Enter author name here" />
+            <button class="btn btn-primary" id="btn-search">Search</button>
+        </div>
+        <div id="author-results"></div>
+
+    </div>
+    <div class="col-md-6">
+        <button class="btn btn-success" id="btn-add">Add an author</button>
+        <div id="add-author"></div>
+    </div>
+</div>
+
+<script>
+
+    //jsSearchAuthor: Listens for "Search" button and loads author results into the page
+    document.getElementById("btn-search").onclick = function () { jsSearchAuthor() };
+    function jsSearchAuthor() {
+
+        $("#author-results").load('@Url.Action("arSearchAuthor", "Author")');
+    }
+
+    //jsAddAuthor: Listens for "Add Book" button and loads _AddAuthorView into the page
+    document.getElementById("btn-add").onclick = function () { jsAddAuthor() };
+    function jsAddAuthor() {
+
+        $("#add-author").load('@Url.Action("arAddAnAuthor", "Author")');
+    }
+</script>
