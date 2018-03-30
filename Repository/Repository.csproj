@@ -8,7 +8,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{88A303A1-BF81-4C57-BD93-CC77E42C5517}</ProjectGuid>
+    <ProjectGuid>{BA82197F-A130-4CD7-B305-4A035E1B35AB}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -83,14 +83,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\dbLibrary.mdf" />
-    <Content Include="App_Data\dbLibrary_log.ldf">
-      <DependentUpon>dbLibrary.mdf</DependentUpon>
+    <Content Include="App_Data\DbJuLibrary.mdf" />
+    <Content Include="App_Data\DbJuLibrary_log.ldf">
+      <DependentUpon>DbJuLibrary.mdf</DependentUpon>
     </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="modelLibrary.cs" />
+    <Compile Include="juLibraryModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <PropertyGroup>
@@ -106,7 +106,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>64227</DevelopmentServerPort>
+          <DevelopmentServerPort>63334</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:63334/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
